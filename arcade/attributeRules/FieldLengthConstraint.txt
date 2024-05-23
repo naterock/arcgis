@@ -1,0 +1,14 @@
+var name_id = $feature.Name
+var o_name_id = $originalfeature.Name
+
+if(name_id == o_name_id) { // you're not changing it
+    return true
+}
+if(IsEmpty(name_id)) { // it's blank
+    return true
+}
+var len = Count(Text(name_id))
+return len == 10
+if(len !=10){
+return {'errorMessage': 'Your PIN does not conform!!'}
+}
